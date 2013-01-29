@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zSlide - Basic Slideshow</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		#slideshow {
+			height: 500px;
+			width: 800px;
+			margin: 10% auto 35px auto;
+			background-color: #CCC;
+			position: relative;
+		}
+		
+		.slideshow_controls {
+			width: 100%;
+			text-align: center;
+		}
+		
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="../zSlide-min.js"></script>
+</head>
+<body>
+	
+	<div id="slideshow"></div>
+	
+	<div class="slideshow_controls">
+		<button id="slideshow1_back">Back</button>
+		<button id="slideshow1_pause">Pause</button>
+		<button id="slideshow1_next">Next</button>
+	</div>
+
+	<script>
+		
+		$('#slideshow').zSlide(['photos/1.jpg','photos/2.jpg','photos/3.jpg'],
+		{
+			interval:	5000,
+			animationSpeed:	250,
+			pause:		$('#slideshow1_pause'),
+			next:		$('#slideshow1_next'),
+			back:		$('#slideshow1_back')
+		});
+
+
+		
+	</script>
+	
+</body>
+</html>

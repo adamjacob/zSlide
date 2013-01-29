@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>zSlide - Fullscreen</title>
+	<style type="text/css">
+		body {
+			margin: 0px;
+		}
+		
+		/* Example Slideshow Title
+		|  - Note the z-index here, most important part
+		*/
+		.title {
+			font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+			font-size: 28pt;
+			color: #FFF;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			height: 65px;
+			width: 50%;
+			text-shadow: 0px 1px 0px rgba(0,0,0,0.8);
+			z-index: 4;
+			padding-left: 30px;
+			font-weight: bold;
+		}
+		
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="../zSlide-min.js"></script>
+</head>
+<body>
+
+	<div class="title">zSlide Fullscreen Example</div>
+
+	<script type="text/javascript">
+		
+		$('body').zSlide(['photos/1.jpg','photos/2.jpg','photos/3.jpg']);
+		
+	</script>
+	
+</body>
+</html>
